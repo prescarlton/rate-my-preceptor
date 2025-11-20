@@ -2,8 +2,8 @@ import Link from "next/link";
 import search from "../actions/search";
 import AddPreceptorModal from "./add-preceptor-modal";
 
-function StarRating({ rating }: { rating: number }) {
-  const numRating = typeof rating === "string" ? parseFloat(rating) : rating;
+function StarRating({ rating }: { rating: string }) {
+  const numRating = parseFloat(rating);
   const fullStars = Math.floor(numRating);
   const hasHalfStar = numRating % 1 >= 0.5;
   const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
@@ -92,7 +92,9 @@ export default async function SearchResults({
                   )}
                   <p className="flex items-center gap-1.5 text-sm text-zinc-600 dark:text-zinc-400">
                     <span>📍</span>
-                    <span className="line-clamp-1">{preceptor.rotation.name} - {preceptor.rotation.location}</span>
+                    <span className="line-clamp-1">
+                      {preceptor.rotation.name} - {preceptor.rotation.location}
+                    </span>
                   </p>
                 </div>
                 <div className="mt-4">
