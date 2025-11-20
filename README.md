@@ -2,6 +2,20 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+### Authentication Setup
+
+This app uses password-based authentication. Set the `SITE_PASSWORD` environment variable to secure your app:
+
+Create a `.env.local` file in the root directory:
+
+```env
+SITE_PASSWORD=your-secure-password-here
+```
+
+If no password is set, the default password is `changeme` (you should change this in production).
+
+### Running the Development Server
+
 First, run the development server:
 
 ```bash
