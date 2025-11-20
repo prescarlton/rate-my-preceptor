@@ -6,8 +6,6 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 This app uses password-based authentication. Set the `SITE_PASSWORD` environment variable to secure your app:
 
-Create a `.env.local` file in the root directory:
-
 ```env
 SITE_PASSWORD=your-secure-password-here
 ```
