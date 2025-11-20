@@ -16,7 +16,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Rate My Preceptor",
-  description: "Find and rate PA school preceptors for your rotations",
+  description:
+    "Find and rate the preceptors and rotations in CSU's PA program.",
 };
 
 export default function RootLayout({
